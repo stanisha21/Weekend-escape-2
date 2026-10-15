@@ -1,0 +1,6 @@
+{
+  "name": "Weekend Escape – Weekend Travel Guide",
+  "description": "A minimal, clean, and professional weekend travel guide helping travelers discover weekend getaways near Mumbai, explore scenic destinations, and plan memorable short trips.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
