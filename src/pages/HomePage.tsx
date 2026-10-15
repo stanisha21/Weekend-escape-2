@@ -1,4 +1,4 @@
-import { ArrowRight, Compass, MapPin, Wallet, Backpack, CheckCircle, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 import { ARTICLES } from '../data/articles';
 import { SEOHead } from '../components/SEOHead';
 import heroLandscapeImg from '../assets/images/hero_maharashtra_landscape_1791897168100.jpg';
@@ -18,14 +18,17 @@ export function HomePage({ onNavigate }: HomePageProps) {
   return (
     <>
       <SEOHead
-        title="Weekend Escape – Weekend Travel Guide & Getaways Near Mumbai"
-        description="Discover refreshing weekend getaways near Mumbai. Explore scenic hill stations, top weekend travel bags, travel packages, and trusted travel agency guides."
+        title="Places to Visit Near Mumbai | Weekend Escape"
+        description="Discover places to visit near Mumbai with destination guides, weekend getaway ideas and practical tips for planning your next short trip."
         canonicalPath="/"
         keywords={[
+          'places to visit near Mumbai',
+          'tourist places near Mumbai',
           'weekend getaways near Mumbai',
-          'weekend travel bags',
-          'weekend travel packages',
-          'weekend travel agency',
+          'places to visit near Mumbai for 2 days',
+          'travel bags',
+          'tour packages',
+          'travel agencies near me',
         ]}
       />
 
@@ -38,23 +41,23 @@ export function HomePage({ onNavigate }: HomePageProps) {
               <div className="lg:col-span-7 space-y-6">
                 <div className="space-y-2">
                   <span className="text-xs font-semibold uppercase tracking-widest text-[#2d5a3f]">
-                    Mindful Short Travels & Escapes
+                    Weekend Travel Guide & Trip Planner
                   </span>
                   <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#183b2b] leading-[1.18] text-balance">
-                    Your Next Weekend Adventure Starts Here:
+                    Discover Scenic Places to Visit Near Mumbai:
                     <span className="block text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#2d5a3f] mt-2 font-serif">
-                      Weekend Getaways Near Mumbai
+                      Weekend Getaways & Short Trips
                     </span>
                   </h1>
                 </div>
 
                 <div className="space-y-4 text-base sm:text-lg text-[#44403c] leading-relaxed max-w-xl">
                   <p>
-                    When urban life in Mumbai begins to feel overwhelming, the cure is waiting just beyond the city limits. Discovering the most restorative{' '}
-                    <strong className="font-semibold text-[#183b2b]">weekend getaways near Mumbai</strong> gives you an opportunity to breathe clean mountain air, listen to coastal waves, and recharge without taking days off work.
+                    When urban life in the city becomes hectic, an easy, refreshing escape is waiting just beyond city borders. Finding the top{' '}
+                    <strong className="font-semibold text-[#183b2b]">places to visit near Mumbai</strong> gives you the chance to breathe cool mountain air, stroll along peaceful beaches, and recharge without taking extended leaves.
                   </p>
                   <p className="text-base text-[#57534e]">
-                    Whether you are packing lightweight <strong className="font-medium text-[#183b2b]">weekend travel bags</strong> for an impromptu road trip, evaluating guided <strong className="font-medium text-[#183b2b]">weekend travel packages</strong> for lake camping, or learning how to choose a reliable <strong className="font-medium text-[#183b2b]">weekend travel agency</strong>, our curated guide provides practical logistics, verified routes, and honest travel advice.
+                    <strong className="font-medium text-[#183b2b]">Weekend Escape</strong> is your dedicated travel guide for discovering popular <strong className="font-medium text-[#183b2b]">tourist places near Mumbai</strong>, exploring rewarding <strong className="font-medium text-[#183b2b]">weekend getaways near Mumbai</strong>, and planning rewarding <strong className="font-medium text-[#183b2b]">places to visit near Mumbai for 2 days</strong>. From selecting ergonomic <strong className="font-medium text-[#183b2b]">travel bags</strong> to evaluating all-inclusive <strong className="font-medium text-[#183b2b]">tour packages</strong> and finding reliable <strong className="font-medium text-[#183b2b]">travel agencies near me</strong>, we provide honest, field-tested guidance.
                   </p>
                 </div>
 
@@ -63,7 +66,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                     onClick={scrollToDestinations}
                     className="inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-[#183b2b] hover:bg-[#234c38] rounded-md transition-colors shadow-sm cursor-pointer whitespace-nowrap"
                   >
-                    <span>Explore Destinations</span>
+                    <span>Explore Places Near Mumbai</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
 
@@ -81,7 +84,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <figure className="relative rounded-2xl overflow-hidden border border-[#dcd3bd] shadow-md bg-[#ede7d9] group">
                   <img
                     src={heroLandscapeImg}
-                    alt="Scenic green mountain landscape in the Western Ghats for weekend getaways near Mumbai"
+                    alt="Scenic green mountain landscape in the Western Ghats representing top places to visit near Mumbai"
                     referrerPolicy="no-referrer"
                     className="w-full h-80 sm:h-96 object-cover transition-transform duration-700 group-hover:scale-102"
                   />
@@ -104,11 +107,11 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   Curated Reading
                 </span>
                 <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#183b2b] mt-1">
-                  Essential Weekend Travel Guides
+                  Top Guides: Places to Visit Near Mumbai, Gear & Packages
                 </h2>
               </div>
               <p className="text-sm text-[#57534e] max-w-md">
-                Four comprehensive, field-tested guides covering scenic destinations near Mumbai, gear selection, package evaluation, and choosing reputable travel agencies.
+                Four comprehensive guides covering popular tourist places near Mumbai, travel bag selection, comparing tour packages, and vetting travel agencies near you.
               </p>
             </div>
 
@@ -165,10 +168,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
                         className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#183b2b] group-hover:text-[#2d5a3f] transition-colors cursor-pointer"
                       >
                         <span>
-                          {article.slug === 'weekend-getaways-near-mumbai' && 'Read Mumbai Getaways Guide'}
+                          {article.slug === 'weekend-getaways-near-mumbai' && 'Explore Places to Visit Near Mumbai'}
                           {article.slug === 'weekend-travel-bags' && 'Read Travel Bags Guide'}
-                          {article.slug === 'weekend-travel-packages' && 'Read Travel Packages Guide'}
-                          {article.slug === 'weekend-travel-agency' && 'Read Travel Agency Guide'}
+                          {article.slug === 'weekend-travel-packages' && 'Read Tour Packages Guide'}
+                          {article.slug === 'weekend-travel-agency' && 'Read Travel Agencies Guide'}
                         </span>
                         <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                       </button>
@@ -188,16 +191,16 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 Traveler Quick Answers
               </span>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#183b2b]">
-                Which places are best for a weekend trip near Mumbai?
+                Which places are best to visit near Mumbai for 2 days?
               </h2>
             </div>
 
             <div className="space-y-4 text-base text-[#44403c] leading-relaxed max-w-4xl">
               <p className="text-lg font-medium text-[#183b2b] bg-[#faf7f2] p-4 rounded-lg border border-[#e2dacb]">
-                The premier destinations for weekend getaways near Mumbai are Lonavala and Khandala for cool mountain viewpoints, Matheran for a tranquil automobile-free hill retreat, Alibaug for breezy beach forts and seafood, and Igatpuri for serene lakeside valleys and camping.
+                The best places to visit near Mumbai for 2 days are Igatpuri and Bhandardara for tranquil lakeside camping and mountain passes, Alibaug for coastal beaches and historic sea fortresses, and Lonavala or Matheran for scenic cliff viewpoints and nature walking trails.
               </p>
               <p>
-                Each destination is reachable within two to four hours by suburban rail, ferry, or highway. When planning short getaways, choosing destinations along direct suburban train lines (such as Neral for Matheran or Karjat) or taking the Mandwa ferry from South Mumbai eliminates Saturday morning highway gridlock and leaves you more time to explore.
+                Each destination is reachable within two to four hours by suburban rail, passenger ferry, or highway. When planning short getaways, choosing destinations along direct suburban train lines (such as Neral for Matheran or Kasara for Igatpuri) or taking the Mandwa passenger catamaran from South Mumbai eliminates Saturday morning highway toll gridlock and leaves you more time to explore.
               </p>
             </div>
 
@@ -206,7 +209,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="font-serif text-base font-bold text-[#183b2b]">Lonavala & Khandala</div>
                 <div className="text-xs text-[#78716c] mt-0.5">83 km · 2 hrs drive</div>
                 <p className="text-xs text-[#57534e] mt-2">
-                  Iconic cliffs, Karla Caves, and local chikki markets in the Sahyadris.
+                  Iconic cliff vistas, Buddhist Karla Caves, and local chikki markets in the Sahyadris.
                 </p>
               </div>
 
@@ -214,7 +217,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <div className="font-serif text-base font-bold text-[#183b2b]">Matheran Hill Station</div>
                 <div className="text-xs text-[#78716c] mt-0.5">80 km · Train to Neral</div>
                 <p className="text-xs text-[#57534e] mt-2">
-                  Pure mountain air, dense woodland trails, and no motor vehicle noise.
+                  Unspoiled mountain air, dense woodland trails, and no motor vehicle noise.
                 </p>
               </div>
 
@@ -232,7 +235,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 onClick={() => onNavigate('/weekend-getaways-near-mumbai')}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#183b2b] hover:text-[#2d5a3f] underline cursor-pointer"
               >
-                <span>Explore the complete guide to the best weekend getaways near Mumbai</span>
+                <span>Read our full destination guide to the best places to visit near Mumbai</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -248,19 +251,19 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   Our Philosophy
                 </span>
                 <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#183b2b]">
-                  About Weekend Escape
+                  About Weekend Escape – Weekend Travel Guide
                 </h2>
                 <p className="text-sm text-[#57534e] leading-relaxed">
-                  We believe that regular, modest getaways into nature produce far greater long-term well-being than waiting months for an exhausting annual holiday.
+                  We believe that regular, mindful short trips into nature produce far greater long-term well-being than waiting months for an exhausting annual holiday.
                 </p>
               </div>
 
               <div className="lg:col-span-7 space-y-4 text-sm text-[#44403c] leading-relaxed">
                 <p>
-                  <strong>Weekend Escape – Weekend Travel Guide</strong> was built with a simple premise: keep short travel honest, accessible, and relaxing. We do not sell hotel bookings, push luxury tour packages, or accept commercial sponsorships that distort recommendations.
+                  <strong>Weekend Escape</strong> is a practical travel guide created to help travelers discover places to visit near Mumbai and plan refreshing short getaways. We do not sell hotel bookings, push overpriced commercial tour packages, or accept sponsorships that distort recommendations.
                 </p>
                 <p>
-                  Every guide on this platform emphasizes realistic logistics: public local train connections from Mumbai, travel bag evaluations, transparent package inspection criteria, and objective agency selection tips. Whether you are a college student planning a weekend road trip on a tight allowance or a working professional needing 48 hours of quiet green vistas, our guides are designed to get you there with confidence.
+                  Every guide on this platform emphasizes realistic logistics: public local train connections across Maharashtra, choosing durable travel bags for weekend mobility, transparent criteria for comparing tour packages, and objective vetting advice when searching for travel agencies near me. Whether you are a college student planning a weekend road trip on a tight allowance or a working professional needing 48 hours of quiet green vistas, our guides are designed to get you there with confidence.
                 </p>
               </div>
             </div>

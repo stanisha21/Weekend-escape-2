@@ -11,10 +11,10 @@ export function Navbar({ currentPath, onNavigate }: NavbarProps) {
 
   const navLinks = [
     { label: 'Home', path: '/' },
-    { label: 'Getaways Near Mumbai', path: '/weekend-getaways-near-mumbai' },
+    { label: 'Places Near Mumbai', path: '/weekend-getaways-near-mumbai' },
     { label: 'Travel Bags', path: '/weekend-travel-bags' },
-    { label: 'Travel Packages', path: '/weekend-travel-packages' },
-    { label: 'Travel Agency Guide', path: '/weekend-travel-agency' },
+    { label: 'Tour Packages', path: '/weekend-travel-packages' },
+    { label: 'Travel Agencies', path: '/weekend-travel-agency' },
   ];
 
   const handleLinkClick = (path: string) => {

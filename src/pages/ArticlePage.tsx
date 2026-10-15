@@ -217,7 +217,7 @@ export function ArticlePage({ article, onNavigate }: ArticlePageProps) {
                     onClick={() => onNavigate('/weekend-getaways-near-mumbai')}
                     className="font-semibold text-[#183b2b] underline hover:text-[#2d5a3f] cursor-pointer"
                   >
-                    guide to the best weekend getaways near Mumbai
+                    guide to the best places to visit near Mumbai
                   </button>
                   .
                 </li>
@@ -229,7 +229,7 @@ export function ArticlePage({ article, onNavigate }: ArticlePageProps) {
                     onClick={() => onNavigate('/weekend-travel-bags')}
                     className="font-semibold text-[#183b2b] underline hover:text-[#2d5a3f] cursor-pointer"
                   >
-                    complete guide to choosing the best weekend travel bags
+                    guide to choosing the best travel bags for short trips
                   </button>
                   .
                 </li>
@@ -241,7 +241,7 @@ export function ArticlePage({ article, onNavigate }: ArticlePageProps) {
                     onClick={() => onNavigate('/weekend-travel-packages')}
                     className="font-semibold text-[#183b2b] underline hover:text-[#2d5a3f] cursor-pointer"
                   >
-                    guide on finding weekend travel packages from Mumbai
+                    guide to choosing the right tour packages for weekend travel
                   </button>
                   .
                 </li>
@@ -253,7 +253,7 @@ export function ArticlePage({ article, onNavigate }: ArticlePageProps) {
                     onClick={() => onNavigate('/weekend-travel-agency')}
                     className="font-semibold text-[#183b2b] underline hover:text-[#2d5a3f] cursor-pointer"
                   >
-                    guide to choosing a trustworthy weekend travel agency
+                    guide to evaluating travel agencies near me
                   </button>
                   .
                 </li>
@@ -333,10 +333,10 @@ export function ArticlePage({ article, onNavigate }: ArticlePageProps) {
                     </div>
                     <div className="pt-2 flex items-center gap-1 text-xs font-semibold text-[#183b2b]">
                       <span>
-                        {rel.slug === 'weekend-getaways-near-mumbai' && 'Explore Mumbai Getaways Guide'}
+                        {rel.slug === 'weekend-getaways-near-mumbai' && 'Explore Places Near Mumbai'}
                         {rel.slug === 'weekend-travel-bags' && 'Explore Travel Bags Guide'}
-                        {rel.slug === 'weekend-travel-packages' && 'Explore Travel Packages Guide'}
-                        {rel.slug === 'weekend-travel-agency' && 'Explore Travel Agency Guide'}
+                        {rel.slug === 'weekend-travel-packages' && 'Explore Tour Packages Guide'}
+                        {rel.slug === 'weekend-travel-agency' && 'Explore Travel Agencies Guide'}
                       </span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </div>

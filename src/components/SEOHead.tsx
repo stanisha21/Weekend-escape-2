@@ -82,41 +82,93 @@ export function SEOHead({
       const articleImgUrl = article.image.startsWith('http')
         ? article.image
         : `${window.location.origin}${article.image.startsWith('/') ? '' : '/'}${article.image}`;
+      
+      const graphItems: object[] = [
+        {
+          '@type': 'BlogPosting',
+          '@id': `${fullUrl}#article`,
+          headline: article.title,
+          description: article.metaDescription,
+          image: articleImgUrl,
+          datePublished: '2026-10-15',
+          dateModified: '2026-10-15',
+          author: {
+            '@type': 'Organization',
+            name: article.author,
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Weekend Escape – Weekend Travel Guide',
+            url: window.location.origin,
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': fullUrl,
+          },
+          keywords: [article.mainKeyword, ...article.relatedKeywords].join(', '),
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': `${fullUrl}#breadcrumb`,
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Home',
+              item: window.location.origin,
+            },
+            {
+              '@type': 'ListItem',
+              position: 2,
+              name: article.category,
+              item: `${window.location.origin}/#articles-section`,
+            },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: article.title,
+              item: fullUrl,
+            },
+          ],
+        },
+      ];
+
+      if (article.faqs && article.faqs.length > 0) {
+        graphItems.push({
+          '@type': 'FAQPage',
+          '@id': `${fullUrl}#faq`,
+          mainEntity: article.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        });
+      }
+
       structuredData = {
         '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: article.title,
-        description: article.metaDescription,
-        image: articleImgUrl,
-        datePublished: '2026-10-15',
-        dateModified: '2026-10-15',
-        author: {
-          '@type': 'Organization',
-          name: article.author,
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Weekend Escape – Weekend Travel Guide',
-          url: window.location.origin,
-        },
-        mainEntityOfPage: {
-          '@type': 'WebPage',
-          '@id': fullUrl,
-        },
-        keywords: [article.mainKeyword, ...article.relatedKeywords].join(', '),
+        '@graph': graphItems,
       };
     } else {
       structuredData = {
         '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: 'Weekend Escape – Weekend Travel Guide',
-        url: window.location.origin,
-        description: description,
-        keywords: keywords.join(', '),
-        publisher: {
-          '@type': 'Organization',
-          name: 'Weekend Escape',
-        },
+        '@graph': [
+          {
+            '@type': 'WebSite',
+            '@id': `${window.location.origin}#website`,
+            name: 'Weekend Escape – Weekend Travel Guide',
+            url: window.location.origin,
+            description: description,
+            keywords: keywords.join(', '),
+            publisher: {
+              '@type': 'Organization',
+              name: 'Weekend Escape',
+            },
+          },
+        ],
       };
     }
 

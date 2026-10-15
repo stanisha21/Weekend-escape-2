@@ -33,7 +33,7 @@ export function Footer({ onNavigate }: FooterProps) {
                   onClick={() => onNavigate('/weekend-getaways-near-mumbai')}
                   className="hover:text-[#183b2b] hover:underline text-left cursor-pointer transition-colors"
                 >
-                  Best Weekend Getaways Near Mumbai
+                  Places to Visit Near Mumbai
                 </button>
               </li>
               <li>
@@ -41,7 +41,7 @@ export function Footer({ onNavigate }: FooterProps) {
                   onClick={() => onNavigate('/weekend-travel-bags')}
                   className="hover:text-[#183b2b] hover:underline text-left cursor-pointer transition-colors"
                 >
-                  How to Choose the Best Weekend Travel Bags
+                  Travel Bags: How to Choose the Right Bag
                 </button>
               </li>
               <li>
@@ -49,7 +49,7 @@ export function Footer({ onNavigate }: FooterProps) {
                   onClick={() => onNavigate('/weekend-travel-packages')}
                   className="hover:text-[#183b2b] hover:underline text-left cursor-pointer transition-colors"
                 >
-                  How to Find Weekend Travel Packages from Mumbai
+                  Tour Packages: How to Choose the Right Trip
                 </button>
               </li>
               <li>
@@ -57,7 +57,7 @@ export function Footer({ onNavigate }: FooterProps) {
                   onClick={() => onNavigate('/weekend-travel-agency')}
                   className="hover:text-[#183b2b] hover:underline text-left cursor-pointer transition-colors"
                 >
-                  How to Choose a Weekend Travel Agency
+                  Travel Agencies Near Me: How to Choose One
                 </button>
               </li>
             </ul>
@@ -91,13 +91,25 @@ export function Footer({ onNavigate }: FooterProps) {
               onClick={() => onNavigate('/weekend-getaways-near-mumbai')}
               className="hover:text-[#183b2b] transition-colors cursor-pointer"
             >
-              Getaways Near Mumbai
+              Places Near Mumbai
             </button>
             <button
               onClick={() => onNavigate('/weekend-travel-bags')}
               className="hover:text-[#183b2b] transition-colors cursor-pointer"
             >
               Travel Bags
+            </button>
+            <button
+              onClick={() => onNavigate('/weekend-travel-packages')}
+              className="hover:text-[#183b2b] transition-colors cursor-pointer"
+            >
+              Tour Packages
+            </button>
+            <button
+              onClick={() => onNavigate('/weekend-travel-agency')}
+              className="hover:text-[#183b2b] transition-colors cursor-pointer"
+            >
+              Travel Agencies
             </button>
           </div>
         </div>
